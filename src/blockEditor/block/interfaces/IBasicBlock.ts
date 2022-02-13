@@ -28,65 +28,65 @@ export interface IDOBasicBlock extends IDOBlockType {
   text: string;
 }
 
-export interface IDOBasicTextBlock extends IDOBasicBlock {
+export interface BasicTextBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Text;
 }
 
-export interface IDOBasicHeading1Block extends IDOBasicBlock {
+export interface BasicHeading1Block extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Heading1;
 }
 
-export interface IDOBasicHeading2Block extends IDOBasicBlock {
+export interface BasicHeading2Block extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Heading2;
 }
 
-export interface IDOBasicHeading3Block extends IDOBasicBlock {
+export interface BasicHeading3Block extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Heading3;
 }
 
-export interface IDOBasicTableBlock extends IDOBasicBlock {
+export interface BasicTableBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Table;
   // Todo: Table 구현 할 때 알맞는 속성 추가!!
 }
 
-export interface IDOBasicTodoListBlock extends IDOBasicBlock {
+export interface BasicTodoListBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.TodoList;
 }
 
-export interface IDOBasicBulletedListBlock extends IDOBasicBlock {
+export interface BasicBulletedListBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.BulletedList;
 }
 
-export interface IDOBasicNumberedListBlock extends IDOBasicBlock {
+export interface BasicNumberedListBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.NumberedList;
 }
 
-export interface IDOBasicToggleListBlock extends IDOBasicBlock {
+export interface BasicToggleListBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.ToggleList;
 }
 
-export interface IDOBasicQuoteBlock extends IDOBasicBlock {
+export interface BasicQuoteBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Quote;
 }
 
-export interface IDOBasicDividerBlock extends IDOBasicBlock {
+export interface BasicDividerBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Divider;
 }
 
-export interface IDOBasicCalloutBlock extends IDOBasicBlock {
+export interface BasicCalloutBlock extends IDOBasicBlock {
   basicBlockType: BasicBlockType.Callout;
 }
 
 export type BASIC_BLOCK =
-  | IDOBasicTextBlock
-  | IDOBasicHeading1Block
-  | IDOBasicHeading2Block
-  | IDOBasicHeading3Block
-  | IDOBasicTableBlock
-  | IDOBasicTodoListBlock
-  | IDOBasicBulletedListBlock
-  | IDOBasicNumberedListBlock
-  | IDOBasicToggleListBlock
-  | IDOBasicQuoteBlock
-  | IDOBasicDividerBlock
-  | IDOBasicCalloutBlock;
+  | BasicTextBlock
+  | BasicHeading1Block
+  | BasicHeading2Block
+  | BasicHeading3Block
+  | BasicTableBlock
+  | BasicTodoListBlock
+  | BasicBulletedListBlock
+  | BasicNumberedListBlock
+  | BasicToggleListBlock
+  | BasicQuoteBlock
+  | BasicDividerBlock
+  | BasicCalloutBlock;
