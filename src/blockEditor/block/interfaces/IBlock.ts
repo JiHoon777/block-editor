@@ -1,8 +1,9 @@
 // 노션과 같은 기본 블락, 인라인 블락 같은 타입들 정의
-import { IDOBasicBlock } from "./IBasicBlock";
+import { BASIC_BLOCK } from "./IBasicBlock";
 
 export enum BlockType {
   Basic = "Basic",
+  Inline = "Inline",
 }
 
 /**
@@ -12,4 +13,4 @@ export interface IDOBlockType {
   blockType: BlockType;
 }
 
-export type DOBlockTypes = IDOBasicBlock;
+export type BLOCK_TYPE_DATA = BASIC_BLOCK;

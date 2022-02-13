@@ -4,19 +4,21 @@ import {
   BasicBlockType,
   IDOBasicBlock,
 } from "../interfaces/IBasicBlock";
-import { computed, makeObservable, observable } from "mobx";
+import { action, computed, makeObservable, observable } from "mobx";
 import { BlockType } from "../interfaces/IBlock";
 
 export abstract class DOBasicBlock implements IDOBasicBlock {
   blockEditor: IBlockEditorStore;
-  data: BASIC_BLOCK;
+  private data: BASIC_BLOCK;
 
   protected constructor(data: BASIC_BLOCK, blockEditor: IBlockEditorStore) {
     this.data = data;
     this.blockEditor = blockEditor;
 
-    makeObservable(this, {
+    makeObservable<this, "data">(this, {
       data: observable,
+
+      setText: action,
 
       text: computed,
       blockType: computed,
@@ -28,7 +30,11 @@ export abstract class DOBasicBlock implements IDOBasicBlock {
     return this.data.text;
   }
 
-  get blockType(): BlockType {
+  setText(text: string) {
+    this.data.text = text;
+  }
+
+  get blockType(): BlockType.Basic {
     return this.data.blockType;
   }
 

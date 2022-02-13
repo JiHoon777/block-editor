@@ -1,5 +1,5 @@
-import { DOBlockTypes } from "./block/interfaces/IBlock";
+import { BLOCK_TYPE_DATA } from "./block/interfaces/IBlock";
 
 export interface IBlockEditorStore {
-  blocks: DOBlockTypes;
+  blocks: BLOCK_TYPE_DATA[];
 }
