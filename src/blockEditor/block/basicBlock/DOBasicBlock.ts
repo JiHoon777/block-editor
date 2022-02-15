@@ -2,12 +2,12 @@ import { IBlockEditorStore } from "../../IBlockEditorStore";
 import {
   BASIC_BLOCK,
   BasicBlockType,
-  IDOBasicBlock,
+  IBasicBlock,
 } from "../interfaces/IBasicBlock";
 import { action, computed, makeObservable, observable } from "mobx";
 import { BlockType } from "../interfaces/IBlock";
 
-export abstract class DOBasicBlock implements IDOBasicBlock {
+export abstract class DOBasicBlock implements IBasicBlock {
   blockEditor: IBlockEditorStore;
   private data: BASIC_BLOCK;
 

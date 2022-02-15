@@ -9,7 +9,7 @@ export enum BlockType {
 /**
  * BlockType 들의 Public Interface 정의
  * */
-export interface IDOBlockType {
+export interface IBlock {
   blockType: BlockType;
 }
 
